@@ -126,23 +126,38 @@
 				align-items: center;
 				cursor: pointer; /* Makes it look clickable */
 			}
-			summary::marker {
+			/* summary::marker {
 				display: flex;
 				order: -1;
+			} */
+			summary::before {
+				content: '➕'; /* Plain text Unicode arrow */
+				display: inline-block;
+				transition: transform 0.2s ease; /* Adds a smooth rotation effect */
+
+				/* Control the exact size here */
+				font-size: 24px;
+				width: 24px;
+				height: 24px;
+				padding-right: 0.25em;
+			}
+			details[open] summary::before {
+				/* transform: rotate(90deg); */
+				content: '➖';
 			}
 			/* Add a custom arrow using a pseudo-element */
-			summary::after {
+			/* summary::after {
 				display: flex;
 				order: -1;
-				content: '▶'; /* Right pointing arrow when closed */
-				transition: transform 0.2s ease; /* Smooth rotation */
-			}
+				content: '▶'; 
+				transition: transform 0.2s ease; 
+			} */
 
 			/* Rotate the arrow downward when the details element is open */
 			details[open] summary::after {
 				transform: rotate(90deg);
 			}
-			@media print {
+			*/ @media print {
 				body {
 					background: white;
 				}
