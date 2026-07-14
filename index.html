@@ -113,6 +113,11 @@
 				margin-right: 8px;
 			}
 
+			.train-icon {
+				border-radius: 2em;
+				padding: 0.2em 0.4em;
+			}
+
 			#trail-afternoon {
 				background-color: #b63737;
 				color: white;
@@ -167,6 +172,25 @@
 			details[open] summary::after {
 				transform: rotate(90deg);
 			}
+
+			#car {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6.5 12a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3m11 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3'/%3E%3Cpath fill='black' d='m20.77 9.16l-1.37-4.1a2.99 2.99 0 0 0-2.85-2.05H7.44a3 3 0 0 0-2.85 2.05l-1.37 4.1c-.72.3-1.23 1.02-1.23 1.84v5c0 .74.41 1.38 1 1.72V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h12v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.28a2 2 0 0 0 1-1.72v-5c0-.83-.51-1.54-1.23-1.84ZM7.44 5h9.12a1 1 0 0 1 .95.68L18.62 9H5.39L6.5 5.68A1 1 0 0 1 7.45 5ZM4 16v-5h16v5z'/%3E%3C/svg%3E");
+			}
+
+			.boxicons--car {
+				display: inline-block;
+				width: 1em;
+				height: 1em;
+				--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6.5 12a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3m11 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3'/%3E%3Cpath fill='black' d='m20.77 9.16l-1.37-4.1a2.99 2.99 0 0 0-2.85-2.05H7.44a3 3 0 0 0-2.85 2.05l-1.37 4.1c-.72.3-1.23 1.02-1.23 1.84v5c0 .74.41 1.38 1 1.72V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h12v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.28a2 2 0 0 0 1-1.72v-5c0-.83-.51-1.54-1.23-1.84ZM7.44 5h9.12a1 1 0 0 1 .95.68L18.62 9H5.39L6.5 5.68A1 1 0 0 1 7.45 5ZM4 16v-5h16v5z'/%3E%3C/svg%3E");
+				background-color: currentColor;
+				-webkit-mask-image: var(--svg);
+				mask-image: var(--svg);
+				-webkit-mask-repeat: no-repeat;
+				mask-repeat: no-repeat;
+				-webkit-mask-size: 100% 100%;
+				mask-size: 100% 100%;
+			}
+
 			@media print {
 				body {
 					background: white;
@@ -296,13 +320,26 @@
 						rel="noopener noreferrer"
 						>Braddock Road Station</a
 					>
-					→ L'Enfant Plaza
+					→
 					<a
 						href="https://maps.app.goo.gl/LktJJbtrRQfCVHF4A"
 						target="_blank"
 						rel="noopener noreferrer"
 						>L'Enfant Plaza</a
 					>
+					<ul>
+						<li>~9:00: Depart house -> walk to Braddock Road Station</li>
+						<li>
+							~9:23: Train departs Braddock station
+							<span
+								class="train-icon"
+								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
+								>Y</span
+							>
+						</li>
+						<li>~9:39: Train arrives at L'Enfant station</li>
+						<li>~9:47: Arrive at Air & Space Museum</li>
+					</ul>
 				</div>
 
 				<div class="reservation">
@@ -398,7 +435,10 @@
 							>
 						</li>
 					</ul>
-					<li class="transport">Return to Alexandria</li>
+					<li class="transport">Return to Alexandria  <span
+								class="train-icon"
+								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
+								>Y</span</li>
 				</ul>
 			</details>
 		</div>
@@ -428,6 +468,19 @@
 						rel="noopener noreferrer"
 						>L'Enfant Plaza</a
 					>
+					<ul>
+						<li>~9:00: Depart house -> walk to Braddock Road Station</li>
+						<li>
+							~9:20: Train departs Braddock station
+							<span
+								class="train-icon"
+								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
+								>Y</span
+							>
+						</li>
+						<li>~9:35: Train arrives at L'Enfant station</li>
+						<li>~9:50: Arrive at Museum of Natural History</li>
+					</ul>
 				</div>
 
 				<h3>Morning</h3>
@@ -530,7 +583,10 @@
 						>
 					</li>
 					<br />
-					<li class="transport">Return to Alexandria</li>
+					<li class="transport">Return to Alexandria  <span
+								class="train-icon"
+								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
+								>Y</span</li>
 				</ul>
 			</details>
 		</div>
@@ -557,7 +613,17 @@
 							rel="noopener noreferrer"
 							>George Washington's Mount Vernon</a
 						>
+						<ul>
+							<li>
+								~8:20: Depart house
+
+								<span>🚗</span>
+							</li>
+							<li>~8:45: Arrive at Mt. Vernon</li>
+							
+						</ul>
 					</li>
+
 					<li>
 						<input class="check" type="checkbox" />Explore museum and grounds
 					</li>
@@ -569,6 +635,8 @@
 				<ul>
 					<li>Lunch at Mount Vernon.</li>
 				</ul>
+
+				<span id="car"></span>
 
 				<h3>12:30 PM</h3>
 
@@ -596,6 +664,7 @@
 							rel="noopener noreferrer"
 							>Bear's Den Overlook</a
 						>
+						<span>🚗</span>
 					</li>
 					<li>
 						<input class="check" type="checkbox" />Walk a section of the
@@ -609,7 +678,7 @@
 				<h3>Evening</h3>
 
 				<ul>
-					<li class="transport">Return to Alexandria</li>
+					<li class="transport">Return to Alexandria <span>🚗</span></li>
 				</ul>
 			</details>
 		</div>
