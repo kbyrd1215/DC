@@ -1,925 +1,854 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Washington, DC Vacation Itinerary | August 6–11</title>
 
-		<style>
-			body {
-				font-family:
-					Segoe UI,
-					Arial,
-					sans-serif;
-				background: #ccd0d3;
-				color: #333;
-				max-width: 1100px;
-				margin: auto;
-				padding: 20px;
-				line-height: 1.6;
-			}
-			header {
-				background: #0b3d91;
-				color: white;
-				padding: 30px;
-				border-radius: 8px;
-				box-shadow:
-					0 20px 25px -10px rgb(0, 0, 0, 1),
-					0 4px 6px -8px rgba(0, 0, 0, 1);
-			}
-			h1 {
-				margin: 0;
-				font-size: 3em;
-			}
-			h2 {
-				display: flex;
-				background: #1f5fa9;
-				color: white;
-				padding: .5em;
-				border-radius: 6px;
-				width: 100%;
-				margin-left: 0.25em;
-				box-shadow:
-					0 20px 20px -10px rgb(0, 0, 0, 1),
-					0 4px 2px -15px rgba(0, 0, 0, 1);
-				font-size: 1.5em;
-			}
-			h3 {
-				color: #0b3d91;
-				margin-bottom: 5px;
-			}
-			.day {
-				background: rgb(251, 243, 251);
-				padding: 20px;
-				margin: 25px 0;
-				border-radius: 8px;
-				/* box-shadow:0 2px 6px rgba(0,0,0,.15); */
-				box-shadow:
-					0 20px 25px -10px rgb(0, 0, 0, 1),
-					0 4px 6px -8px rgba(0, 0, 0, 1);
-			}
-			.summary {
-				background: white;
-				padding: 20px;
-				border-radius: 8px;
-				margin: 20px 0;
-				box-shadow:
-					0 20px 25px -10px rgb(0, 0, 0, 1),
-					0 4px 6px -8px rgba(0, 0, 0, 1);
-			}
-			.transport {
-				background: #eaf4ff;
-				border-left: 5px solid #0b3d91;
-				padding: 12px;
-				margin: 15px 0;
-			}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Washington, DC Vacation Itinerary | August 6–11</title>
 
-			.run {
-				background: #d5ebd9;
-				border-left: 5px solid #26910b;
-				padding: 12px;
-				margin: 15px 0;
-			}
-			.reservation {
-				background: #fff6d6;
-				border-left: 5px solid #c18a00;
-				padding: 12px;
-				margin: 15px 0;
-			}
-			.optional {
-				background: #f5f5f5;
-				padding: 20px;
-				border-radius: 8px;
-				box-shadow:
-					0 20px 25px -10px rgb(0, 0, 0, 1),
-					0 4px 6px -8px rgba(0, 0, 0, 1);
-			}
-			ul {
-				margin-top: 5px;
-			}
-			table {
-				width: 100%;
-				border-collapse: collapse;
-			}
-			th {
-				background: #0b3d91;
-				color: white;
-			}
-			th,
-			td {
-				border: 1px solid #ccc;
-				padding: 8px;
-			}
-			.check {
-				margin-right: 8px;
-			}
+	<style>
+		body {
+			font-family:
+				Segoe UI,
+				Arial,
+				sans-serif;
+			background: #ccd0d3;
+			color: #333;
+			max-width: 1100px;
+			margin: auto;
+			padding: 20px;
+			line-height: 1.6;
+		}
 
-			.train-icon {
-				border-radius: 2em;
-				padding: 0.2em 0.4em;
-			}
+		header {
+			background: #0b3d91;
+			color: white;
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow:
+				0 20px 25px -10px rgb(0, 0, 0, 1),
+				0 4px 6px -8px rgba(0, 0, 0, 1);
+		}
 
-			#trail-afternoon {
-				background-color: #b63737;
-				color: white;
-				padding: 5px;
-			}
+		h1 {
+			margin: 0;
+			font-size: 3em;
+		}
 
-			.custom-link {
-				color: rgb(141, 186, 190);
-			}
+		h2 {
+			display: flex;
+			background: #1f5fa9;
+			color: white;
+			padding: .5em;
+			border-radius: 6px;
+			width: 100%;
+			margin-left: 0.25em;
+			box-shadow:
+				0 20px 20px -10px rgb(0, 0, 0, 1),
+				0 4px 2px -15px rgba(0, 0, 0, 1);
+			font-size: 1.5em;
+		}
 
-			summary {
-				list-style: none;
-			}
-			summary::-webkit-details-marker {
-				display: none;
-			}
+		h3 {
+			color: #0b3d91;
+			margin-bottom: 5px;
+		}
 
-			summary {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				cursor: pointer; /* Makes it look clickable */
-			}
-			/* summary::marker {
+		.day {
+			background: rgb(251, 243, 251);
+			padding: 20px;
+			margin: 25px 0;
+			border-radius: 8px;
+			/* box-shadow:0 2px 6px rgba(0,0,0,.15); */
+			box-shadow:
+				0 20px 25px -10px rgb(0, 0, 0, 1),
+				0 4px 6px -8px rgba(0, 0, 0, 1);
+		}
+
+		.summary {
+			background: white;
+			padding: 20px;
+			border-radius: 8px;
+			margin: 20px 0;
+			box-shadow:
+				0 20px 25px -10px rgb(0, 0, 0, 1),
+				0 4px 6px -8px rgba(0, 0, 0, 1);
+		}
+
+		.transport {
+			background: #eaf4ff;
+			border-left: 5px solid #0b3d91;
+			padding: 12px;
+			margin: 15px 0;
+			font-weight: 900;
+		}
+
+		.run {
+			background: #d5ebd9;
+			border-left: 5px solid #26910b;
+			padding: 12px;
+			margin: 15px 0;
+		}
+
+		.reservation {
+			background: #fff6d6;
+			border-left: 5px solid #c18a00;
+			padding: 12px;
+			margin: 15px 0;
+		}
+
+		.optional {
+			background: #f5f5f5;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow:
+				0 20px 25px -10px rgb(0, 0, 0, 1),
+				0 4px 6px -8px rgba(0, 0, 0, 1);
+		}
+
+		ul {
+			margin-top: 5px;
+		}
+
+		li {
+			font-weight: bold;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th {
+			background: #0b3d91;
+			color: white;
+		}
+
+		th,
+		td {
+			border: 1px solid #ccc;
+			padding: 8px;
+		}
+
+		.check {
+			margin-right: 8px;
+		}
+
+		.train-icon {
+			border-radius: 2em;
+			padding: 0.2em 0.4em;
+		}
+
+		#trail-afternoon {
+			background-color: #b63737;
+			color: white;
+			padding: 5px;
+		}
+
+		.custom-link {
+			color: rgb(141, 186, 190);
+		}
+
+		summary {
+			list-style: none;
+		}
+
+		summary::-webkit-details-marker {
+			display: none;
+		}
+
+		summary {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			/* Makes it look clickable */
+		}
+
+		/* summary::marker {
 				display: flex;
 				order: -1;
 			} */
-			summary::before {
-				content: '➕'; /* Plain text Unicode arrow */
-				display: inline-block;
-				transition: transform 0.2s ease; /* Adds a smooth rotation effect */
+		summary::before {
+			content: '➕';
+			/* Plain text Unicode arrow */
+			display: inline-block;
+			transition: transform 0.2s ease;
+			/* Adds a smooth rotation effect */
 
-				/* Control the exact size here */
-				font-size: 2em;
-				width: 1em;
-				height: 1em;
-				padding-right: 0.25em;
-			}
-			details[open] summary::before {
-				/* transform: rotate(90deg); */
-				content: '➖';
-			}
-			/* Add a custom arrow using a pseudo-element */
-			/* summary::after {
+			/* Control the exact size here */
+			font-size: 2em;
+			width: 1em;
+			height: 1em;
+			padding-right: 0.25em;
+		}
+
+		details[open] summary::before {
+			/* transform: rotate(90deg); */
+			content: '➖';
+		}
+
+		/* Add a custom arrow using a pseudo-element */
+		/* summary::after {
 				display: flex;
 				order: -1;
 				content: '▶'; 
 				transition: transform 0.2s ease; 
 			} */
 
-			/* Rotate the arrow downward when the details element is open */
-			details[open] summary::after {
-				transform: rotate(90deg);
+		/* Rotate the arrow downward when the details element is open */
+		details[open] summary::after {
+			transform: rotate(90deg);
+		}
+
+		#car {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6.5 12a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3m11 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3'/%3E%3Cpath fill='black' d='m20.77 9.16l-1.37-4.1a2.99 2.99 0 0 0-2.85-2.05H7.44a3 3 0 0 0-2.85 2.05l-1.37 4.1c-.72.3-1.23 1.02-1.23 1.84v5c0 .74.41 1.38 1 1.72V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h12v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.28a2 2 0 0 0 1-1.72v-5c0-.83-.51-1.54-1.23-1.84ZM7.44 5h9.12a1 1 0 0 1 .95.68L18.62 9H5.39L6.5 5.68A1 1 0 0 1 7.45 5ZM4 16v-5h16v5z'/%3E%3C/svg%3E");
+		}
+
+		.boxicons--car {
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6.5 12a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3m11 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3'/%3E%3Cpath fill='black' d='m20.77 9.16l-1.37-4.1a2.99 2.99 0 0 0-2.85-2.05H7.44a3 3 0 0 0-2.85 2.05l-1.37 4.1c-.72.3-1.23 1.02-1.23 1.84v5c0 .74.41 1.38 1 1.72V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h12v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.28a2 2 0 0 0 1-1.72v-5c0-.83-.51-1.54-1.23-1.84ZM7.44 5h9.12a1 1 0 0 1 .95.68L18.62 9H5.39L6.5 5.68A1 1 0 0 1 7.45 5ZM4 16v-5h16v5z'/%3E%3C/svg%3E");
+			background-color: currentColor;
+			-webkit-mask-image: var(--svg);
+			mask-image: var(--svg);
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-size: 100% 100%;
+			mask-size: 100% 100%;
+		}
+
+		@media print {
+			body {
+				background: white;
 			}
 
-			#car {
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6.5 12a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3m11 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3'/%3E%3Cpath fill='black' d='m20.77 9.16l-1.37-4.1a2.99 2.99 0 0 0-2.85-2.05H7.44a3 3 0 0 0-2.85 2.05l-1.37 4.1c-.72.3-1.23 1.02-1.23 1.84v5c0 .74.41 1.38 1 1.72V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h12v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.28a2 2 0 0 0 1-1.72v-5c0-.83-.51-1.54-1.23-1.84ZM7.44 5h9.12a1 1 0 0 1 .95.68L18.62 9H5.39L6.5 5.68A1 1 0 0 1 7.45 5ZM4 16v-5h16v5z'/%3E%3C/svg%3E");
+			.day {
+				box-shadow: none;
+				page-break-inside: avoid;
 			}
+		}
+	</style>
+</head>
 
-			.boxicons--car {
-				display: inline-block;
-				width: 1em;
-				height: 1em;
-				--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6.5 12a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3m11 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3'/%3E%3Cpath fill='black' d='m20.77 9.16l-1.37-4.1a2.99 2.99 0 0 0-2.85-2.05H7.44a3 3 0 0 0-2.85 2.05l-1.37 4.1c-.72.3-1.23 1.02-1.23 1.84v5c0 .74.41 1.38 1 1.72V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2h12v2c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.28a2 2 0 0 0 1-1.72v-5c0-.83-.51-1.54-1.23-1.84ZM7.44 5h9.12a1 1 0 0 1 .95.68L18.62 9H5.39L6.5 5.68A1 1 0 0 1 7.45 5ZM4 16v-5h16v5z'/%3E%3C/svg%3E");
-				background-color: currentColor;
-				-webkit-mask-image: var(--svg);
-				mask-image: var(--svg);
-				-webkit-mask-repeat: no-repeat;
-				mask-repeat: no-repeat;
-				-webkit-mask-size: 100% 100%;
-				mask-size: 100% 100%;
-			}
+<body>
+	<header>
+		<h1>Washington, DC Trip</h1>
+		<p><strong>August 6–11</strong></p>
+		<p>
+			<strong>Lodging:</strong> Old Town Alexandria, Virginia
+			<span><a class="custom-link" href="8244f1e7-1978-42ad-ac2e-b75e1d1b94e2.jpg" target="_blank">
+					(Airbnb)</a></span>
+		</p>
+		<p>
+			<strong>Primary Transportation:</strong>
+			<a href="https://www.wmata.com/" target="_blank" rel="noopener noreferrer" class="custom-link">Washington
+				Metro,</a>
+			walking, and rental car for Mount Vernon, Bear's Den, and Udvar-Hazy
+			Center.
+		</p>
+	</header>
 
-			@media print {
-				body {
-					background: white;
-				}
-				.day {
-					box-shadow: none;
-					page-break-inside: avoid;
-				}
-			}
-		</style>
-	</head>
+	<div class="summary, day">
+		<h2 style="margin-left: 0; width: auto">Reservations</h2>
 
-	<body>
-		<header>
-			<h1>Washington, DC Trip</h1>
-			<p><strong>August 6–11</strong></p>
-			<p>
-				<strong>Lodging:</strong> Old Town Alexandria, Virginia
-				<span
-					><a
-						class="custom-link"
-						href="8244f1e7-1978-42ad-ac2e-b75e1d1b94e2.jpg"
-						target="_blank"
-					>
-						(Airbnb)</a
-					></span
-				>
-			</p>
-			<p>
-				<strong>Primary Transportation:</strong>
-				<a
-					href="https://www.wmata.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="custom-link"
-					>Washington Metro,</a
-				>
-				walking, and rental car for Mount Vernon, Bear's Den, and Udvar-Hazy
-				Center.
-			</p>
-		</header>
+		<table>
+			<tr>
+				<th>Date</th>
+				<th>Reservation</th>
+				<th>Time</th>
+			</tr>
 
-		<div class="summary, day">
-			<h2 style="margin-left: 0; width: auto">Reservations</h2>
+			<tr>
+				<td>Friday, Aug. 7</td>
+				<td>National Air & Space Museum</td>
+				<td>10:00 AM</td>
+			</tr>
 
-			<table>
-				<tr>
-					<th>Date</th>
-					<th>Reservation</th>
-					<th>Time</th>
-				</tr>
+			<tr>
+				<td>Sunday, Aug. 9</td>
+				<td>Mount Vernon Mansion Tour</td>
+				<td>9:45 AM</td>
+			</tr>
 
-				<tr>
-					<td>Friday, Aug. 7</td>
-					<td>National Air & Space Museum</td>
-					<td>10:00 AM</td>
-				</tr>
+			<tr>
+				<td>Sunday, Aug. 9</td>
+				<td>Mount Vernon River Cruise</td>
+				<td>12:30 PM</td>
+			</tr>
+		</table>
+	</div>
 
-				<tr>
-					<td>Sunday, Aug. 9</td>
-					<td>Mount Vernon Mansion Tour</td>
-					<td>9:45 AM</td>
-				</tr>
+	<div class="day">
+		<details>
+			<summary>
+				<h2>Thursday • August 6 - Explore Alexandria</h2>
+			</summary>
 
-				<tr>
-					<td>Sunday, Aug. 9</td>
-					<td>Mount Vernon River Cruise</td>
-					<td>12:30 PM</td>
-				</tr>
-			</table>
-		</div>
+			<h3>Arrival & Explore Old Town Alexandria</h3>
 
-		<div class="day">
-			<details>
-				<summary><h2>Thursday • August 6 - Explore Alexandria</h2></summary>
-
-				<h3>Arrival & Explore Old Town Alexandria</h3>
-
+			<ul>
+				<li><a href="https://maps.app.goo.gl/9LHQGxNuDYJrwBRW8" target="_blank" rel="noopener noreferrer">Check
+						into Airbnb </a></li>
+				<li>Get Supplies </li>
 				<ul>
-					<li>Check into Airbnb.</li>
-					<li>Walk historic King Street.</li>
-					<li>Browse local shops and galleries.</li>
 					<li>
-						<a
-							href="https://maps.app.goo.gl/a415eFNXWYcCHF2p6"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Visit the Torpedo Factory Art Center.</a
-						>
+						<a href="https://maps.app.goo.gl/hYypNpuRsPE3x6weA" target="_blank"
+							rel="noopener noreferrer">Trader Joe's</a>
 					</li>
 					<li>
-						<a
-							href="https://maps.app.goo.gl/wcubgLgaopgnUq7w6"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Walk the Alexandria waterfront.</a
-						>
+						<a href="https://maps.app.goo.gl/oZukr3y54PCyUNuCA" target="_blank"
+							rel="noopener noreferrer">Harris Teeter</a>
 					</li>
-					<li>Dinner overlooking the Potomac River.</li>
 					<li>
-						<a
-							href="https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/alexandria/2021_Visit_Alexandria_Official_Visitor_Guide_Self_Guided_Tour_ad9a4bed-1d65-47fb-b60d-d976843602c2.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Self-guided Walking Tour of Alexandria</a
-						>
+						<a href="https://maps.app.goo.gl/8UiyDcQj5x7MdVmu9" target="_blank"
+							rel="noopener noreferrer">Whole Foods Market</a>
 					</li>
 				</ul>
-			</details>
-		</div>
+				<li>Walk historic King Street.</li>
+				<li>
+					<a href="https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/alexandria/2021_Visit_Alexandria_Official_Visitor_Guide_Self_Guided_Tour_ad9a4bed-1d65-47fb-b60d-d976843602c2.pdf"
+						target="_blank" rel="noopener noreferrer">Self-guided Walking Tour of Alexandria</a>
+				</li>
+				<li>Browse local shops and galleries.</li>
+				<ul>
+					<li>
+						<a href="https://maps.app.goo.gl/9YxrP4vPkjQQ7twq8" target="_blank"
+							rel="noopener noreferrer">Shop Made in
+							VA</a>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/a415eFNXWYcCHF2p6" target="_blank"
+							rel="noopener noreferrer">Torpedo Factory Art Center</a>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/Zf7rs366SxRGnCvg6" target="_blank"
+							rel="noopener noreferrer">The World Crafted on King</a><span> (Christmas Ornaments)</span>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/fRbL48ceca5eR2yH8" target="_blank"
+							rel="noopener noreferrer">The Spice & Tea Exchange</a>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/82DJXo2HtXueipFi6" target="_blank"
+							rel="noopener noreferrer">The Antique Guild</a>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/tiMMn5x3aNDop9uk8" target="_blank"
+							rel="noopener noreferrer">Penny Post</a>
+					</li>
+				</ul>
 
-		<div class="day">
-			<details>
-				<summary>
-					<h2>
-						Friday • August 7 - Air & Space, American History, and "the Castle"
-					</h2>
-				</summary>
+				<li>
+					<a href="https://maps.app.goo.gl/wcubgLgaopgnUq7w6" target="_blank" rel="noopener noreferrer">Walk
+						the Alexandria waterfront.</a>
+				</li>
+				<li>Casual Dining in Old Town</li>
+				<ul>
+					<li>
+						<a href="https://maps.app.goo.gl/1BLaXi2H6KexnB1y5" target="_blank"
+							rel="noopener noreferrer">Mia's Italian Kitchen</a><span> (Best Value - Very Popular)</span>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/FWTYUMJkbFvCa9kp9" target="_blank"
+							rel="noopener noreferrer">The Majestic</a><span> (Casual American)</span>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/BuKNS27k7JaZDDcG8" target="_blank"
+							rel="noopener noreferrer">Virtue Feed & Grain</a><span> (Best Historic Atmosphere)</span>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/KKpmuC3wJth2jAFJ9" target="_blank"
+							rel="noopener noreferrer">Fontaine Caffe & Creperie</a><span> (French Cafe')</span>
+					</li>
+				</ul>
+				<li>Dinner overlooking the Potomac River.</li>
+				<ul>
+					<li>
+						<a href="https://maps.app.goo.gl/248KdFfCpsQPMb846" target="_blank"
+							rel="noopener noreferrer">Vola's Dockside Grill</a><span> ($$)</span>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/F4poShGcPFA3r7Yy7" target="_blank"
+							rel="noopener noreferrer">BARCA Pier & Wine Bar</a><span> ($$$)</span>
+					</li>
+					<li>
+						<a href="https://maps.app.goo.gl/JjrdoW4Txw6ygjUS6" target="_blank"
+							rel="noopener noreferrer">Ada's on the River</a><span> ($$$$)</span>
+					</li>
+				</ul>
 
-				<h3 class="run">Group Run - 6am</h3>
 
-				<div class="transport">
-					Walk → Metro:
-					<a
-						href="https://maps.app.goo.gl/BYKxRdLkptJtEuPb7"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Braddock Road Station</a
-					>
-					→
-					<a
-						href="https://maps.app.goo.gl/LktJJbtrRQfCVHF4A"
-						target="_blank"
-						rel="noopener noreferrer"
-						>L'Enfant Plaza</a
-					>
+			</ul>
+		</details>
+	</div>
+
+	<div class="day">
+		<details>
+			<summary>
+				<h2>
+					Friday • August 7 - Air & Space, American History, and "the Castle"
+				</h2>
+			</summary>
+
+			<h3 class="run">Group Run - 6am</h3>
+
+			<div class="transport">
+				Walk → Metro:
+				<a href="https://maps.app.goo.gl/BYKxRdLkptJtEuPb7" target="_blank" rel="noopener noreferrer">Braddock
+					Road Station</a>
+				→
+				<a href="https://maps.app.goo.gl/LktJJbtrRQfCVHF4A" target="_blank" rel="noopener noreferrer">L'Enfant
+					Plaza</a>
+				<ul>
+					<li>~9:00: Depart house -> walk to Braddock Road Station</li>
+					<li>
+						~9:23: Train departs Braddock station
+						<span class="train-icon"
+							style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)">Y</span>
+					</li>
+					<li>~9:39: Train arrives at L'Enfant station</li>
+					<li>~9:47: Arrive at Air & Space Museum</li>
+				</ul>
+			</div>
+
+			<div class="reservation">
+				<strong>Reserved Entry:</strong> National Air & Space Museum – 10:00
+				AM
+			</div>
+
+			<h3>Morning</h3>
+
+			<ul>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://airandspace.si.edu/" target="_blank"
+						rel="noopener noreferrer">National Air & Space Museum</a>
+					(10:00 AM–1:00 PM)
+				</li>
+				<li>
+					Highlights:
 					<ul>
-						<li>~9:00: Depart house -> walk to Braddock Road Station</li>
-						<li>
-							~9:23: Train departs Braddock station
-							<span
-								class="train-icon"
-								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
-								>Y</span
-							>
-						</li>
-						<li>~9:39: Train arrives at L'Enfant station</li>
-						<li>~9:47: Arrive at Air & Space Museum</li>
+						<li>Wright Flyer</li>
+						<li>Apollo 11 Command Module</li>
+						<li>Mercury & Gemini spacecraft</li>
+						<li>Spirit of St. Louis</li>
 					</ul>
-				</div>
+				</li>
+			</ul>
 
-				<div class="reservation">
-					<strong>Reserved Entry:</strong> National Air & Space Museum – 10:00
-					AM
-				</div>
+			<h3>Lunch</h3>
 
-				<h3>Morning</h3>
+			<ul>
+				<li>
+					<input class="check" type="checkbox" />Lunch on the National Mall.
+				</li>
+			</ul>
 
-				<ul>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://airandspace.si.edu/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>National Air & Space Museum</a
-						>
-						(10:00 AM–1:00 PM)
-					</li>
-					<li>
-						Highlights:
-						<ul>
-							<li>Wright Flyer</li>
-							<li>Apollo 11 Command Module</li>
-							<li>Mercury & Gemini spacecraft</li>
-							<li>Spirit of St. Louis</li>
-						</ul>
-					</li>
-				</ul>
+			<h3>Afternoon</h3>
 
-				<h3>Lunch</h3>
+			<ul>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://americanhistory.si.edu/" target="_blank"
+						rel="noopener noreferrer">National Museum of American History</a>
+				</li>
+				<li>
+					See the Star-Spangled Banner, First Ladies exhibit, transportation
+					exhibits, and presidential artifacts.
+				</li>
+			</ul>
 
-				<ul>
-					<li>
-						<input class="check" type="checkbox" />Lunch on the National Mall.
-					</li>
-				</ul>
-
-				<h3>Afternoon</h3>
-
-				<ul>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://americanhistory.si.edu/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>National Museum of American History</a
-						>
-					</li>
-					<li>
-						See the Star-Spangled Banner, First Ladies exhibit, transportation
-						exhibits, and presidential artifacts.
-					</li>
-				</ul>
-
-				<h3>Late Afternoon</h3>
-				<ul>
-					<li>
-						<input class="check" type="checkbox" />
-						<a
-							href="https://maps.app.goo.gl/qerWRWCEgQUP5jeq7"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Smithsonian Institution Building("The Castle")</a
-						>
-						<ul>
-							<li>
-								30-45 minutes to see the architecture, gardens, and visitors
-								center.
-							</li>
-						</ul>
-					</li>
-				</ul>
-
-				<h3>Evening</h3>
-				<ul>
-					<li>If time allows:</li>
+			<h3>Late Afternoon</h3>
+			<ul>
+				<li>
+					<input class="check" type="checkbox" />
+					<a href="https://maps.app.goo.gl/qerWRWCEgQUP5jeq7" target="_blank"
+						rel="noopener noreferrer">Smithsonian Institution Building("The Castle")</a>
 					<ul>
 						<li>
-							<input class="check" type="checkbox" /><a
-								href="https://maps.app.goo.gl/8pTEHeLJXBRd5Ayd8"
-								target="_blank"
-								rel="noopener noreferrer"
-								>Washington Monument</a
-							>
-						</li>
-						<li>
-							<input class="check" type="checkbox" /><a
-								href="https://maps.app.goo.gl/xKMHMvK1fxNUzS4s9"
-								target="_blank"
-								rel="noopener noreferrer"
-								>World War II Memorial</a
-							>
+							30-45 minutes to see the architecture, gardens, and visitors
+							center.
 						</li>
 					</ul>
-					<li class="transport">Return to Alexandria  <span
-								class="train-icon"
-								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
-								>Y</span</li>
+				</li>
+			</ul>
+
+			<h3>Evening</h3>
+			<ul>
+				<li>If time allows:</li>
+				<ul>
+					<li>
+						<input class="check" type="checkbox" /><a href="https://maps.app.goo.gl/8pTEHeLJXBRd5Ayd8"
+							target="_blank" rel="noopener noreferrer">Washington Monument</a>
+					</li>
+					<li>
+						<input class="check" type="checkbox" /><a href="https://maps.app.goo.gl/xKMHMvK1fxNUzS4s9"
+							target="_blank" rel="noopener noreferrer">World War II Memorial</a>
+					</li>
 				</ul>
-			</details>
-		</div>
+				<li class="transport">Return to Alexandria <span class="train-icon"
+						style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)">Y</span< /li>
+			</ul>
+		</details>
+	</div>
 
-		<div class="day">
-			<details>
-				<summary>
-					<h2>
-						Saturday • August 8 - Natural History, National Archives, & Portrait
-						Gallery
-					</h2>
-				</summary>
-				<h3 class="run">Group Run - 6am</h3>
+	<div class="day">
+		<details>
+			<summary>
+				<h2>
+					Saturday • August 8 - Natural History, National Archives, & Portrait
+					Gallery
+				</h2>
+			</summary>
+			<h3 class="run">Group Run - 6am</h3>
 
-				<div class="transport">
-					Walk → Metro:
-					<a
-						href="https://maps.app.goo.gl/BYKxRdLkptJtEuPb7"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Braddock Road Station</a
-					>
-					→
-					<a
-						href="https://maps.app.goo.gl/LktJJbtrRQfCVHF4A"
-						target="_blank"
-						rel="noopener noreferrer"
-						>L'Enfant Plaza</a
-					>
+			<div class="transport">
+				Walk → Metro:
+				<a href="https://maps.app.goo.gl/BYKxRdLkptJtEuPb7" target="_blank" rel="noopener noreferrer">Braddock
+					Road Station</a>
+				→
+				<a href="https://maps.app.goo.gl/LktJJbtrRQfCVHF4A" target="_blank" rel="noopener noreferrer">L'Enfant
+					Plaza</a>
+				<ul>
+					<li>~9:00: Depart house -> walk to Braddock Road Station</li>
+					<li>
+						~9:20: Train departs Braddock station
+						<span class="train-icon"
+							style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)">Y</span>
+					</li>
+					<li>~9:35: Train arrives at L'Enfant station</li>
+					<li>~9:50: Arrive at Museum of Natural History</li>
+				</ul>
+			</div>
+
+			<h3>Morning</h3>
+
+			<ul>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://naturalhistory.si.edu/" target="_blank"
+						rel="noopener noreferrer">National Museum of Natural History</a>
+				</li>
+			</ul>
+
+			<h3>Lunch</h3>
+
+			<ul>
+				<li>
+					<input class="check" type="checkbox" />Lunch near the National
+					Archives.
+				</li>
+			</ul>
+
+			<h3>Early Afternoon</h3>
+
+			<ul>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://visit.archives.gov/" target="_blank"
+						rel="noopener noreferrer">National Archives</a>
+				</li>
+				<li>
+					View:
 					<ul>
-						<li>~9:00: Depart house -> walk to Braddock Road Station</li>
-						<li>
-							~9:20: Train departs Braddock station
-							<span
-								class="train-icon"
-								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
-								>Y</span
-							>
-						</li>
-						<li>~9:35: Train arrives at L'Enfant station</li>
-						<li>~9:50: Arrive at Museum of Natural History</li>
+						<li>Declaration of Independence</li>
+						<li>United States Constitution</li>
+						<li>Bill of Rights</li>
 					</ul>
-				</div>
+				</li>
+			</ul>
 
-				<h3>Morning</h3>
-
-				<ul>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://naturalhistory.si.edu/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>National Museum of Natural History</a
-						>
-					</li>
-				</ul>
-
-				<h3>Lunch</h3>
+			<h3>Mid-Afternoon</h3>
+			<ul>
+				<li class="transport">
+					Walk or take Metro to
+					<a href="https://npg.si.edu/" target="_blank" rel="noopener noreferrer">National Portrait
+						Gallery</a>
+				</li>
+				<li>Highlights:</li>
 
 				<ul>
-					<li>
-						<input class="check" type="checkbox" />Lunch near the National
-						Archives.
-					</li>
+					<li>Presidential Portraits</li>
+					<li>America's Presidents Exhibition</li>
+					<li>Contemporary Portraits</li>
+					<li>Kogod Courtyard</li>
 				</ul>
+			</ul>
 
-				<h3>Early Afternoon</h3>
+			<h3>Evening (as time allows)</h3>
 
-				<ul>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://visit.archives.gov/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>National Archives</a
-						>
-					</li>
-					<li>
-						View:
-						<ul>
-							<li>Declaration of Independence</li>
-							<li>United States Constitution</li>
-							<li>Bill of Rights</li>
-						</ul>
-					</li>
-				</ul>
+			<ul>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://maps.app.goo.gl/nV3fPCyt14V8X28N9"
+						target="_blank" rel="noopener noreferrer">Lincoln Memorial</a>
+				</li>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://www.recreation.gov/ticket/facility/10113318"
+						target="_blank" rel="noopener noreferrer">Lincoln Memorial Undercroft</a>
+				</li>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://maps.app.goo.gl/gvhJ4BbqyMVNrnqeA"
+						target="_blank" rel="noopener noreferrer">Vietnam Veterans Memorial</a>
+				</li>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://maps.app.goo.gl/Qk1HnU1c6vo9MZHU9"
+						target="_blank" rel="noopener noreferrer">Korean War Veterans Memorial</a>
+				</li>
+				<br />
+				<li class="transport">Return to Alexandria <span class="train-icon"
+						style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)">Y</span< /li>
+			</ul>
+		</details>
+	</div>
 
-				<h3>Mid-Afternoon</h3>
-				<ul>
-					<li class="transport">
-						Walk or take Metro to
-						<a
-							href="https://npg.si.edu/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>National Portrait Gallery</a
-						>
-					</li>
-					<li>Highlights:</li>
+	<div class="day">
+		<details>
+			<summary>
+				<h2>Sunday • August 9 - Mt. Vernon & Appalachian Trail</h2>
+			</summary>
 
-					<ul>
-						<li>Presidential Portraits</li>
-						<li>America's Presidents Exhibition</li>
-						<li>Contemporary Portraits</li>
-						<li>Kogod Courtyard</li>
-					</ul>
-				</ul>
+			<div class="reservation">
+				<strong>Reserved Mansion Tour:</strong> 9:45 AM<br />
+				<strong>Reserved River Cruise:</strong> 12:30 PM
+			</div>
 
-				<h3>Evening (as time allows)</h3>
+			<h3>Morning</h3>
 
-				<ul>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://maps.app.goo.gl/nV3fPCyt14V8X28N9"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Lincoln Memorial</a
-						>
-					</li>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://www.recreation.gov/ticket/facility/10113318"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Lincoln Memorial Undercroft</a
-						>
-					</li>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://maps.app.goo.gl/gvhJ4BbqyMVNrnqeA"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Vietnam Veterans Memorial</a
-						>
-					</li>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://maps.app.goo.gl/Qk1HnU1c6vo9MZHU9"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Korean War Veterans Memorial</a
-						>
-					</li>
-					<br />
-					<li class="transport">Return to Alexandria  <span
-								class="train-icon"
-								style="background-color: rgb(255, 209, 0); color: rgb(0, 0, 0)"
-								>Y</span</li>
-				</ul>
-			</details>
-		</div>
-
-		<div class="day">
-			<details>
-				<summary>
-					<h2>Sunday • August 9 - Mt. Vernon & Appalachian Trail</h2>
-				</summary>
-
-				<div class="reservation">
-					<strong>Reserved Mansion Tour:</strong> 9:45 AM<br />
-					<strong>Reserved River Cruise:</strong> 12:30 PM
-				</div>
-
-				<h3>Morning</h3>
-
-				<ul>
-					<li class="transport">
-						Drive to
-						<a
-							href="https://www.mountvernon.org/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>George Washington's Mount Vernon</a
-						>
-						<ul>
-							<li>
-								~8:20: Depart house
-
-								<span>🚗</span>
-							</li>
-							<li>~8:45: Arrive at Mt. Vernon</li>
-							
-						</ul>
-					</li>
-
-					<li>
-						<input class="check" type="checkbox" />Explore museum and grounds
-					</li>
-					<li><input class="check" type="checkbox" />9:45 AM Mansion Tour</li>
-				</ul>
-
-				<h3>Lunch</h3>
-
-				<ul>
-					<li>Lunch at Mount Vernon.</li>
-				</ul>
-
-				<span id="car"></span>
-
-				<h3>12:30 PM</h3>
-
-				<ul>
-					<li>
-						<input class="check" type="checkbox" />45-minute narrated Potomac
-						River Cruise
-					</li>
-				</ul>
-
-				<h3>
-					Afternoon
-					<span id="trail-afternoon"
-						>(Optional for people who don't care about trails or are prone to
-						falling on trails)</span
-					>
-				</h3>
-
-				<ul>
-					<li class="transport">
-						Drive to
-						<a
-							href="https://maps.app.goo.gl/WUe4jWhrXBK4mkrA8"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Bear's Den Overlook</a
-						>
-						<span>🚗</span>
-					</li>
-					<li>
-						<input class="check" type="checkbox" />Walk a section of the
-						Appalachian Trail
-					</li>
-					<li>
-						<input class="check" type="checkbox" />Enjoy Shenandoah Valley views
-					</li>
-				</ul>
-
-				<h3>Evening</h3>
-
-				<ul>
-					<li class="transport">Return to Alexandria <span>🚗</span></li>
-				</ul>
-			</details>
-		</div>
-
-		<div class="day">
-			<details>
-				<summary>
-					<h2>
-						Monday • August 10 - Library of Congress, Botanic Garden & National
-						Cathedral
-					</h2>
-				</summary>
-				<h3 class="run">Group Run - 6am</h3>
-
-				<div class="transport">
-					Walk → Metro:
-					<a
-						href="https://maps.app.goo.gl/BYKxRdLkptJtEuPb7"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Braddock Road Station</a
-					>
-					→ Capitol South
-				</div>
-
-				<h3>Morning</h3>
-
-				<ul>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://www.loc.gov/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Library of Congress</a
-						>
-						(Approximately 2 hours)
-					</li>
-					<ul>
-						<li>Great Hall</li>
-						<li>Reading Room overlook</li>
-					</ul>
-				</ul>
-
-				<h3>Lunch</h3>
-
-				<ul>
-					<li>Lunch at Library of Congress (or area)</li>
-				</ul>
-
-				<h3>Early Afternoon</h3>
-				<ul>
-					<li>
-						Visit
-						<a
-							href="https://www.usbg.gov/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Botanic Garden</a
-						>
-					</li>
-				</ul>
-				<h3>Mid-Afternoon</h3>
-
-				<ul>
-					<li class="transport">
-						Metro (35 to 45 minutes) or rideshare to National Cathedral
-					</li>
-					<li>
-						<input class="check" type="checkbox" /><a
-							href="https://cathedral.org/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Washington National Cathedral</a
-						>
-					</li>
-					<li>
-						Highlights:
-						<ul>
-							<li>Space Window</li>
-							<li>Moon Rock</li>
-							<li>Nave</li>
-							<li>Gardens</li>
-						</ul>
-					</li>
-				</ul>
-
-				<h3>Late Afternoon/Evening (Optional as Time Allows)</h3>
-
-				<ul>
-					<span style="font-style: italic"
-						>These items might have been done on Saturday</span
-					>
-					<li class="transport">Rideshare back to Mall (15-20 minutes)</li>
-					<li>
-						<a
-							href="https://maps.app.goo.gl/nV3fPCyt14V8X28N9"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Lincoln Memorial</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://www.recreation.gov/ticket/facility/10113318"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Lincoln Memorial Undercroft</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://maps.app.goo.gl/gvhJ4BbqyMVNrnqeA"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Vietnam Veterans Memorial</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://maps.app.goo.gl/Qk1HnU1c6vo9MZHU9"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Korean War Veterans Memorial</a
-						>
-					</li>
-				</ul>
-
-				<h3>Evening</h3>
-				<ul>
-					<li class="transport">Return to Alexandria</li>
-				</ul>
-			</details>
-		</div>
-
-		<div class="day">
-			<details>
-				<summary>
-					<h2>Tuesday • August 11 - Space Shuttle and Head for Home</h2>
-				</summary>
-
-				<h3>Morning</h3>
-
-				<ul>
-					<li class="transport">
-						Drive to the
-						<a
-							href="https://maps.app.goo.gl/bgBi9z5nGeEq5y7v6"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Steven F. Udvar-Hazy Center</a
-						>
-					</li>
-					<span style="font-style: italic">3.5 to 4 hours to tour</span>
-				</ul>
-
-				<p><strong>Must See:</strong></p>
-
-				<ul>
-					<li>Space Shuttle Discovery</li>
-					<li>SR-71 Blackbird</li>
-					<li>Concorde</li>
-					<li>Enola Gay</li>
-					<li>Boeing 707 Prototype</li>
-					<li>Observation Tower</li>
-				</ul>
-				<h3>Lunch at the Museum</h3>
-
-				<h3>Afternoon/Evening</h3>
-				<p class="transport">
+			<ul>
+				<li class="transport">
 					Drive to
-					<a
-						href="https://maps.app.goo.gl/gCVjjUv2UKeFB5MJ9"
-						target="_blank"
-						rel="noopener noreferrer"
-						>DCA</a
-					>
-					for return home
-				</p>
-			</details>
-		</div>
+					<a href="https://www.mountvernon.org/" target="_blank" rel="noopener noreferrer">George Washington's
+						Mount Vernon</a>
+					<ul>
+						<li>
+							~8:20: Depart house
 
-		<div class="optional">
-			<details>
-				<summary>
-					<h2>Time Available?</h2>
-				</summary>
+							<span>🚗</span>
+						</li>
+						<li>~8:45: Arrive at Mt. Vernon</li>
 
-				<p>If additional free time develops during the trip, consider:</p>
+					</ul>
+				</li>
 
+				<li>
+					<input class="check" type="checkbox" />Explore museum and grounds
+				</li>
+				<li><input class="check" type="checkbox" />9:45 AM Mansion Tour</li>
+			</ul>
+
+			<h3>Lunch</h3>
+
+			<ul>
+				<li>Lunch at Mount Vernon.</li>
+			</ul>
+
+			<span id="car"></span>
+
+			<h3>12:30 PM</h3>
+
+			<ul>
+				<li>
+					<input class="check" type="checkbox" />45-minute narrated Potomac
+					River Cruise
+				</li>
+			</ul>
+
+			<h3>
+				Afternoon
+				<span id="trail-afternoon">(Optional for people who don't care about trails or are prone to
+					falling on trails)</span>
+			</h3>
+
+			<ul>
+				<li class="transport">
+					Drive to
+					<a href="https://maps.app.goo.gl/WUe4jWhrXBK4mkrA8" target="_blank" rel="noopener noreferrer">Bear's
+						Den Overlook</a>
+					<span>🚗</span>
+				</li>
+				<li>
+					<input class="check" type="checkbox" />Walk a section of the
+					Appalachian Trail
+				</li>
+				<li>
+					<input class="check" type="checkbox" />Enjoy Shenandoah Valley views
+				</li>
+			</ul>
+
+			<h3>Evening</h3>
+
+			<ul>
+				<li class="transport">Return to Alexandria <span>🚗</span></li>
+			</ul>
+		</details>
+	</div>
+
+	<div class="day">
+		<details>
+			<summary>
+				<h2>
+					Monday • August 10 - Library of Congress, Botanic Garden & National
+					Cathedral
+				</h2>
+			</summary>
+			<h3 class="run">Group Run - 6am</h3>
+
+			<div class="transport">
+				Walk → Metro:
+				<a href="https://maps.app.goo.gl/BYKxRdLkptJtEuPb7" target="_blank" rel="noopener noreferrer">Braddock
+					Road Station</a>
+				→ Capitol South
+			</div>
+
+			<h3>Morning</h3>
+
+			<ul>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://www.loc.gov/" target="_blank"
+						rel="noopener noreferrer">Library of Congress</a>
+					(Approximately 2 hours)
+				</li>
 				<ul>
-					<li>
-						<a
-							href="https://maps.app.goo.gl/ZDYS1rm8Wrx9BPxq5"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Changing of the Guard at the Tomb of the Unknown Soldier</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://www.nga.gov/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>National Gallery of Art</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://www.nps.gov/this/index.htm"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Theodore Roosevelt Island</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://www.spymuseum.org/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>International Spy Museum</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://maps.app.goo.gl/WiqdAqG9LDwHfX6p9"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Kennedy Center Terrace</a
-						>
-					</li>
-					<li>
-						<a
-							href="https://maps.app.goo.gl/9fi7CLouLgAhCf7UA"
-							target="_blank"
-							rel="noopener noreferrer"
-							>The Excorcist Steps (Georgetown)</a
-						>
-					</li>
+					<li>Great Hall</li>
+					<li>Reading Room overlook</li>
 				</ul>
-			</details>
-		</div>
-	</body>
+			</ul>
+
+			<h3>Lunch</h3>
+
+			<ul>
+				<li>Lunch at Library of Congress (or area)</li>
+			</ul>
+
+			<h3>Early Afternoon</h3>
+			<ul>
+				<li>
+					Visit
+					<a href="https://www.usbg.gov/" target="_blank" rel="noopener noreferrer">Botanic Garden</a>
+				</li>
+			</ul>
+			<h3>Mid-Afternoon</h3>
+
+			<ul>
+				<li class="transport">
+					Metro (35 to 45 minutes) or rideshare to National Cathedral
+				</li>
+				<li>
+					<input class="check" type="checkbox" /><a href="https://cathedral.org/" target="_blank"
+						rel="noopener noreferrer">Washington National Cathedral</a>
+				</li>
+				<li>
+					Highlights:
+					<ul>
+						<li>Space Window</li>
+						<li>Moon Rock</li>
+						<li>Nave</li>
+						<li>Gardens</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h3>Late Afternoon/Evening (Optional as Time Allows)</h3>
+
+			<ul>
+				<span style="font-style: italic">These items might have been done on Saturday</span>
+				<li class="transport">Rideshare back to Mall (15-20 minutes)</li>
+				<li>
+					<a href="https://maps.app.goo.gl/nV3fPCyt14V8X28N9" target="_blank"
+						rel="noopener noreferrer">Lincoln Memorial</a>
+				</li>
+				<li>
+					<a href="https://www.recreation.gov/ticket/facility/10113318" target="_blank"
+						rel="noopener noreferrer">Lincoln Memorial Undercroft</a>
+				</li>
+				<li>
+					<a href="https://maps.app.goo.gl/gvhJ4BbqyMVNrnqeA" target="_blank"
+						rel="noopener noreferrer">Vietnam Veterans Memorial</a>
+				</li>
+				<li>
+					<a href="https://maps.app.goo.gl/Qk1HnU1c6vo9MZHU9" target="_blank" rel="noopener noreferrer">Korean
+						War Veterans Memorial</a>
+				</li>
+			</ul>
+
+			<h3>Evening</h3>
+			<ul>
+				<li class="transport">Return to Alexandria</li>
+			</ul>
+		</details>
+	</div>
+
+	<div class="day">
+		<details>
+			<summary>
+				<h2>Tuesday • August 11 - Space Shuttle and Head for Home</h2>
+			</summary>
+
+			<h3>Morning</h3>
+
+			<ul>
+				<li class="transport">
+					Drive to the
+					<a href="https://maps.app.goo.gl/bgBi9z5nGeEq5y7v6" target="_blank" rel="noopener noreferrer">Steven
+						F. Udvar-Hazy Center</a>
+				</li>
+				<span style="font-style: italic">3.5 to 4 hours to tour</span>
+			</ul>
+
+			<p><strong>Must See:</strong></p>
+
+			<ul>
+				<li>Space Shuttle Discovery</li>
+				<li>SR-71 Blackbird</li>
+				<li>Concorde</li>
+				<li>Enola Gay</li>
+				<li>Boeing 707 Prototype</li>
+				<li>Observation Tower</li>
+			</ul>
+			<h3>Lunch at the Museum</h3>
+
+			<h3>Afternoon/Evening</h3>
+			<p class="transport">
+				Drive to
+				<a href="https://maps.app.goo.gl/gCVjjUv2UKeFB5MJ9" target="_blank" rel="noopener noreferrer">DCA</a>
+				for return home
+			</p>
+		</details>
+	</div>
+
+	<div class="optional">
+		<details>
+			<summary>
+				<h2>Time Available?</h2>
+			</summary>
+
+			<p>If additional free time develops during the trip, consider:</p>
+
+			<ul>
+				<li>
+					<a href="https://maps.app.goo.gl/ZDYS1rm8Wrx9BPxq5" target="_blank"
+						rel="noopener noreferrer">Changing of the Guard at the Tomb of the Unknown Soldier</a>
+				</li>
+				<li>
+					<a href="https://www.nga.gov/" target="_blank" rel="noopener noreferrer">National Gallery of Art</a>
+				</li>
+				<li>
+					<a href="https://www.nps.gov/this/index.htm" target="_blank" rel="noopener noreferrer">Theodore
+						Roosevelt Island</a>
+				</li>
+				<li>
+					<a href="https://www.spymuseum.org/" target="_blank" rel="noopener noreferrer">International Spy
+						Museum</a>
+				</li>
+				<li>
+					<a href="https://maps.app.goo.gl/WiqdAqG9LDwHfX6p9" target="_blank"
+						rel="noopener noreferrer">Kennedy Center Terrace</a>
+				</li>
+				<li>
+					<a href="https://maps.app.goo.gl/9fi7CLouLgAhCf7UA" target="_blank" rel="noopener noreferrer">The
+						Excorcist Steps (Georgetown)</a>
+				</li>
+			</ul>
+		</details>
+	</div>
+</body>
+
 </html>
